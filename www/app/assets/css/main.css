@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────
+   La Casa de María — Brand Design System
+   ───────────────────────────────────────────────────────── */
+
+/* Brand Colors as CSS Custom Properties */
+:root {
+  --color-brand-gold: #C2A45A;
+  --color-brand-gold-light: #D4BA7A;
+  --color-brand-gold-dark: #A68B3E;
+  --color-brand-ivory: #FAFAF5;
+  --color-brand-charcoal: #2A2925;
+  --color-brand-stone: #EFECE4;
+  --color-brand-stone-dark: #D9D4C8;
+}
+
+/* ─────────────────────────────────────────────────────────
+   Typography
+   ───────────────────────────────────────────────────────── */
+.font-display {
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-body {
+  font-family: 'Lora', serif;
+  font-weight: 400;
+}
+
+/* Default body typography */
+body {
+  font-family: 'Lora', serif;
+  color: var(--color-brand-charcoal);
+  background-color: var(--color-brand-ivory);
+}
+
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+}
+
+/* Montserrat utility for nav/labels */
+.tracking-brand {
+  letter-spacing: 0.15em;
+}
+
+/* ─────────────────────────────────────────────────────────
+   Page Transitions
+   ───────────────────────────────────────────────────────── */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+/* ─────────────────────────────────────────────────────────
+   Scroll & Entrance Animations
+   ───────────────────────────────────────────────────────── */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Staggered animation delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* ─────────────────────────────────────────────────────────
+   Brand Divider
+   ───────────────────────────────────────────────────────── */
+.brand-divider {
+  border: none;
+  height: 1px;
+  background-color: var(--color-brand-gold);
+  opacity: 0.4;
+}
+
+.brand-divider-centered {
+  border: none;
+  height: 1px;
+  background-color: var(--color-brand-gold);
+  opacity: 0.4;
+  width: 80px;
+  margin: 2rem auto;
+}
+
+/* ─────────────────────────────────────────────────────────
+   Image Styling
+   ───────────────────────────────────────────────────────── */
+.brand-image-frame {
+  border: 1px solid var(--color-brand-gold);
+  padding: 4px;
+}
+
+/* Hover zoom for gallery images */
+.image-hover-zoom {
+  overflow: hidden;
+}
+
+.image-hover-zoom img {
+  transition: transform 0.6s ease;
+}
+
+.image-hover-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* ─────────────────────────────────────────────────────────
+   Parallax / Depth
+   ───────────────────────────────────────────────────────── */
+.parallax-layer {
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+/* ─────────────────────────────────────────────────────────
+   Brand Button Styles
+   ───────────────────────────────────────────────────────── */
+.btn-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background-color: var(--color-brand-gold);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-brand:hover {
+  background-color: var(--color-brand-gold-dark);
+  transform: translateY(-1px);
+}
+
+.btn-brand-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background-color: transparent;
+  color: var(--color-brand-gold);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: 1px solid var(--color-brand-gold);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-brand-outline:hover {
+  background-color: var(--color-brand-gold);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* ─────────────────────────────────────────────────────────
+   Section Backgrounds
+   ───────────────────────────────────────────────────────── */
+.bg-ivory { background-color: var(--color-brand-ivory); }
+.bg-stone { background-color: var(--color-brand-stone); }
+.text-charcoal { color: var(--color-brand-charcoal); }
+.text-gold { color: var(--color-brand-gold); }
+.border-gold { border-color: var(--color-brand-gold); }
+
+/* ─────────────────────────────────────────────────────────
+   Brand Marks — single-colour logos tinted via currentColor
+   ───────────────────────────────────────────────────────── */
+.brand-wordmark,
+.brand-iso {
+  background-color: currentColor;
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+.brand-wordmark {
+  mask-image: url('/images/brand/logo-wordmark-compact.webp');
+}
+
+.brand-iso {
+  mask-image: url('/images/brand/iso.webp');
+}

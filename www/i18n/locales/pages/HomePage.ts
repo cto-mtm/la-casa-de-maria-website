@@ -1,0 +1,40 @@
+export default {
+  en: {
+    exclusiveImageAlt: 'The lounge, with hand-painted tiles and antique furniture',
+    subtitle: 'Boutique Rural Hotel · Algarinejo, Granada',
+    heroDescription: 'A 200-year-old heritage house where every room tells its own story, set in the serene Andalusian countryside.',
+    discoverRooms: 'Discover Our Rooms',
+    essenceLabel: 'The Essence',
+    essenceTitle: 'Two Centuries of Andalusian Heritage',
+    essenceText: 'Nestled among olive groves and rolling hills, La Casa de María has stood for over 200 years as a testament to Andalusian craftsmanship. Original stone walls, hand-painted tiles, and wooden beams frame every corner — carefully preserved and lovingly restored to welcome guests seeking an authentic escape from the modern world.',
+    roomsLabel: 'Accommodations',
+    roomsTitle: 'Nine Rooms, One Heritage House',
+    topFloorHighlight: 'Our largest room, with a private balcony and the best views in the house.',
+    standardHighlight: 'Warm, comfortable double rooms with private en-suite bathrooms throughout the house.',
+    roomsSubtext: 'All nine rooms are doubles with a bed for two. Choose our one Top Floor Room, or a comfortable Standard Room — including a ground-floor option for guests who prefer to avoid stairs.',
+    viewRoom: 'View Room',
+    exclusiveLabel: 'Private Events',
+    exclusiveTitle: 'The Entire House, Exclusively Yours',
+    exclusiveText: 'For family gatherings, intimate celebrations, or a group retreat — reserve all rooms and shared spaces for a truly private Andalusian experience. The decorated cellar, the sun-lit courtyard, and every corner of this historic house become yours alone.',
+    exclusiveCta: 'Inquire for Exclusive Use'
+  },
+  es: {
+    exclusiveImageAlt: 'El salón, con azulejos pintados a mano y muebles antiguos',
+    subtitle: 'Hotel Rural Boutique · Algarinejo, Granada',
+    heroDescription: 'Una casa histórica de 200 años donde cada habitación cuenta su propia historia, en el sereno campo andaluz.',
+    discoverRooms: 'Descubre Nuestras Habitaciones',
+    essenceLabel: 'La Esencia',
+    essenceTitle: 'Dos Siglos de Patrimonio Andaluz',
+    essenceText: 'Entre olivares y colinas, La Casa de María ha permanecido durante más de 200 años como testimonio de la artesanía andaluza. Muros de piedra originales, azulejos pintados a mano y vigas de madera enmarcan cada rincón — cuidadosamente preservados y restaurados con amor para recibir a huéspedes que buscan una escapada auténtica del mundo moderno.',
+    roomsLabel: 'Alojamiento',
+    roomsTitle: 'Nueve Habitaciones, Una Casa con Historia',
+    topFloorHighlight: 'Nuestra habitación más amplia, con balcón privado y las mejores vistas de la casa.',
+    standardHighlight: 'Habitaciones dobles cálidas y cómodas con baño privado por toda la casa.',
+    roomsSubtext: 'Las nueve habitaciones son dobles, con cama para dos personas. Elige nuestra única Habitación de la Planta Alta o una cómoda Habitación Estándar — incluida una opción en planta baja para huéspedes que prefieren evitar las escaleras.',
+    viewRoom: 'Ver Habitación',
+    exclusiveLabel: 'Eventos Privados',
+    exclusiveTitle: 'La Casa Entera, Exclusivamente Para Ti',
+    exclusiveText: 'Para reuniones familiares, celebraciones íntimas o retiros en grupo — reserva todas las habitaciones y espacios compartidos para una experiencia andaluza verdaderamente privada. La bodega decorada, el patio iluminado y cada rincón de esta casa histórica son solo tuyos.',
+    exclusiveCta: 'Consultar Uso Exclusivo'
+  }
+}

@@ -1,0 +1,35 @@
+# Logs
+logs
+*.log
+firebase-debug*.log*
+
+# Firebase
+.firebase/
+firebase/.firebase/
+firebase/www/
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE / AI
+.claude/
+
+# Build output
+dist/
+.nuxt/
+.output/
+.data/
+
+# Email previews
+preview/
+
+# Full-resolution photo originals (web versions live in www/public/images)
+media-originals/
