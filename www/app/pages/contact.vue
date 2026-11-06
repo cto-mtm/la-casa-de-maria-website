@@ -6,30 +6,45 @@ useSeoMeta({
   description: 'Get in touch with La Casa de María. Book a room directly, inquire about exclusive use, or ask us anything.'
 })
 
-const { submit, loading, error } = useSubmitForm()
-const success = ref(false)
+const WHATSAPP_NUMBER = '34670398348'
 
 const form = reactive({
+  inquiryType: 'room-booking',
   name: '',
-  email: '',
-  phone: '',
-  message: '',
-  inquiryType: 'room-booking'
+  checkIn: '',
+  checkOut: '',
+  guests: '2',
+  message: ''
 })
 
-async function handleSubmit() {
-  success.value = false
-  const result = await submit('contact', { ...form })
-  if (result.success) {
-    success.value = true
-    form.name = ''
-    form.email = ''
-    form.phone = ''
-    form.message = ''
-    form.inquiryType = 'room-booking'
-  }
+const typeKeys: Record<string, string> = {
+  'room-booking': 'ContactPage.typeRoomBooking',
+  'whole-house': 'ContactPage.typeWholeHouse',
+  'general': 'ContactPage.typeGeneral'
 }
 
+// Stay details only matter for bookings, not general questions
+const needsStayDetails = computed(() => form.inquiryType !== 'general')
+const whatsappUrl = ref('')
+
+// Builds a prefilled WhatsApp message from the form and opens the chat
+function handleSubmit() {
+  const lines = [
+    t('ContactPage.waGreeting'),
+    '',
+    `${t('ContactPage.inquiryTypeLabel')}: ${t(typeKeys[form.inquiryType] ?? typeKeys.general)}`,
+    `${t('ContactPage.nameLabel')}: ${form.name.trim()}`
+  ]
+  if (needsStayDetails.value) {
+    if (form.checkIn) lines.push(`${t('ContactPage.checkInLabel')}: ${form.checkIn}`)
+    if (form.checkOut) lines.push(`${t('ContactPage.checkOutLabel')}: ${form.checkOut}`)
+    if (form.guests) lines.push(`${t('ContactPage.guestsLabel')}: ${form.guests}`)
+  }
+  if (form.message.trim()) lines.push(`${t('ContactPage.messageLabel')}: ${form.message.trim()}`)
+
+  whatsappUrl.value = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`
+  window.open(whatsappUrl.value, '_blank', 'noopener')
+}
 // FAQ items
 const faqItems = [
   { q: 'ContactPage.faq1Q', a: 'ContactPage.faq1A' },
@@ -117,19 +132,15 @@ function toggleFaq(index: number) {
           </p>
         </div>
 
-        <!-- Success message -->
-        <div v-if="success" class="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-sm text-emerald-800 font-body text-sm" role="alert">
-          {{ t('ContactPage.successMessage') }}
-        </div>
-
-        <!-- Error message -->
-        <div v-if="error" class="mb-6 p-4 bg-rose-50 border border-rose-200 rounded-sm text-rose-800 font-body text-sm" role="alert">
-          {{ error }}
+        <!-- Fallback if the browser blocked the WhatsApp window -->
+        <div v-if="whatsappUrl" class="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-sm text-emerald-800 font-body text-sm" role="status">
+          {{ t('ContactPage.whatsappOpened') }}
+          <a :href="whatsappUrl" target="_blank" rel="noopener" class="underline font-semibold">{{ t('ContactPage.whatsappRetry') }}</a>
         </div>
 
         <form
           toolname="contact-form"
-          tooldescription="Submit a booking inquiry or general message to La Casa de María"
+          tooldescription="Prepare a booking inquiry or general message for La Casa de María and send it via WhatsApp"
           class="space-y-6"
           @submit.prevent="handleSubmit"
         >
@@ -141,7 +152,7 @@ function toggleFaq(index: number) {
             <select
               id="inquiry-type"
               v-model="form.inquiryType"
-              class="w-full rounded-sm border border-[var(--color-brand-stone-dark)] bg-white px-4 py-3 font-body text-sm text-[var(--color-brand-charcoal)] focus:border-[var(--color-brand-gold)] focus:ring-1 focus:ring-[var(--color-brand-gold)] transition-colors"
+              class="w-full rounded-sm border border-[var(--color-brand-stone-dark)] bg-white px-4 py-3 font-body text-sm text-[var(--color-brand-charcoal)] placeholder-[var(--color-brand-charcoal)]/40 focus:border-[var(--color-brand-gold)] focus:ring-1 focus:ring-[var(--color-brand-gold)] transition-colors"
             >
               <option value="room-booking">{{ t('ContactPage.typeRoomBooking') }}</option>
               <option value="whole-house">{{ t('ContactPage.typeWholeHouse') }}</option>
@@ -166,67 +177,72 @@ function toggleFaq(index: number) {
             />
           </div>
 
-          <!-- Email -->
-          <div>
-            <label for="contact-email" class="block font-montserrat text-xs uppercase tracking-[0.1em] text-[var(--color-brand-charcoal)] mb-2">
-              {{ t('ContactPage.emailLabel') }} <span class="text-rose-500" aria-hidden="true">*</span>
-            </label>
-            <input
-              id="contact-email"
-              v-model="form.email"
-              type="email"
-              required
-              autocomplete="email"
-              aria-required="true"
-              aria-describedby="email-hint"
-              class="w-full rounded-sm border border-[var(--color-brand-stone-dark)] bg-white px-4 py-3 font-body text-sm text-[var(--color-brand-charcoal)] placeholder-[var(--color-brand-charcoal)]/40 focus:border-[var(--color-brand-gold)] focus:ring-1 focus:ring-[var(--color-brand-gold)] transition-colors"
-              :placeholder="t('ContactPage.emailPlaceholder')"
-            />
-            <p id="email-hint" class="mt-1 font-body text-xs text-[var(--color-brand-charcoal)]/50">
-              {{ t('ContactPage.emailHint') }}
-            </p>
-          </div>
-
-          <!-- Phone -->
-          <div>
-            <label for="contact-phone" class="block font-montserrat text-xs uppercase tracking-[0.1em] text-[var(--color-brand-charcoal)] mb-2">
-              {{ t('ContactPage.phoneLabel') }}
-            </label>
-            <input
-              id="contact-phone"
-              v-model="form.phone"
-              type="tel"
-              autocomplete="tel"
-              class="w-full rounded-sm border border-[var(--color-brand-stone-dark)] bg-white px-4 py-3 font-body text-sm text-[var(--color-brand-charcoal)] placeholder-[var(--color-brand-charcoal)]/40 focus:border-[var(--color-brand-gold)] focus:ring-1 focus:ring-[var(--color-brand-gold)] transition-colors"
-              :placeholder="t('ContactPage.phonePlaceholder')"
-            />
+          <!-- Stay details (bookings only) -->
+          <div v-if="needsStayDetails" class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div>
+              <label for="contact-checkin" class="block font-montserrat text-xs uppercase tracking-[0.1em] text-[var(--color-brand-charcoal)] mb-2">
+                {{ t('ContactPage.checkInLabel') }}
+              </label>
+              <input
+                id="contact-checkin"
+                v-model="form.checkIn"
+                type="date"
+                class="w-full rounded-sm border border-[var(--color-brand-stone-dark)] bg-white px-4 py-3 font-body text-sm text-[var(--color-brand-charcoal)] placeholder-[var(--color-brand-charcoal)]/40 focus:border-[var(--color-brand-gold)] focus:ring-1 focus:ring-[var(--color-brand-gold)] transition-colors"
+              />
+            </div>
+            <div>
+              <label for="contact-checkout" class="block font-montserrat text-xs uppercase tracking-[0.1em] text-[var(--color-brand-charcoal)] mb-2">
+                {{ t('ContactPage.checkOutLabel') }}
+              </label>
+              <input
+                id="contact-checkout"
+                v-model="form.checkOut"
+                type="date"
+                :min="form.checkIn || undefined"
+                class="w-full rounded-sm border border-[var(--color-brand-stone-dark)] bg-white px-4 py-3 font-body text-sm text-[var(--color-brand-charcoal)] placeholder-[var(--color-brand-charcoal)]/40 focus:border-[var(--color-brand-gold)] focus:ring-1 focus:ring-[var(--color-brand-gold)] transition-colors"
+              />
+            </div>
+            <div>
+              <label for="contact-guests" class="block font-montserrat text-xs uppercase tracking-[0.1em] text-[var(--color-brand-charcoal)] mb-2">
+                {{ t('ContactPage.guestsLabel') }}
+              </label>
+              <input
+                id="contact-guests"
+                v-model="form.guests"
+                type="number"
+                min="1"
+                max="20"
+                inputmode="numeric"
+                class="w-full rounded-sm border border-[var(--color-brand-stone-dark)] bg-white px-4 py-3 font-body text-sm text-[var(--color-brand-charcoal)] placeholder-[var(--color-brand-charcoal)]/40 focus:border-[var(--color-brand-gold)] focus:ring-1 focus:ring-[var(--color-brand-gold)] transition-colors"
+              />
+            </div>
           </div>
 
           <!-- Message -->
           <div>
             <label for="contact-message" class="block font-montserrat text-xs uppercase tracking-[0.1em] text-[var(--color-brand-charcoal)] mb-2">
-              {{ t('ContactPage.messageLabel') }} <span class="text-rose-500" aria-hidden="true">*</span>
+              {{ t('ContactPage.messageLabel') }}
+              <span v-if="!needsStayDetails" class="text-rose-500" aria-hidden="true">*</span>
             </label>
             <textarea
               id="contact-message"
               v-model="form.message"
-              required
+              :required="!needsStayDetails"
+              :aria-required="!needsStayDetails"
+              aria-describedby="message-hint"
               rows="5"
-              aria-required="true"
               class="w-full rounded-sm border border-[var(--color-brand-stone-dark)] bg-white px-4 py-3 font-body text-sm text-[var(--color-brand-charcoal)] placeholder-[var(--color-brand-charcoal)]/40 focus:border-[var(--color-brand-gold)] focus:ring-1 focus:ring-[var(--color-brand-gold)] transition-colors resize-y"
               :placeholder="t('ContactPage.messagePlaceholder')"
             />
+            <p id="message-hint" class="mt-1 font-body text-xs text-[var(--color-brand-charcoal)]/50">
+              {{ t('ContactPage.whatsappHint') }}
+            </p>
           </div>
 
           <!-- Submit -->
-          <button
-            type="submit"
-            :disabled="loading"
-            class="btn-brand w-full justify-center disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            <UIcon v-if="!loading" name="i-lucide-send" class="w-4 h-4" />
-            <UIcon v-else name="i-lucide-loader-2" class="w-4 h-4 animate-spin" />
-            {{ loading ? t('ContactPage.sending') : t('ContactPage.submit') }}
+          <button type="submit" class="btn-brand w-full justify-center">
+            <UIcon name="i-lucide-message-circle" class="w-4 h-4" />
+            {{ t('ContactPage.submit') }}
           </button>
         </form>
       </div>
@@ -235,9 +251,16 @@ function toggleFaq(index: number) {
     <!-- Location & Contact Info -->
     <section class="bg-ivory py-24 px-6">
       <div class="mx-auto max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <!-- Map placeholder -->
-        <div class="aspect-[4/3] bg-[var(--color-brand-stone)] rounded-sm flex items-center justify-center">
-          <UIcon name="i-lucide-map" class="w-16 h-16 text-[var(--color-brand-charcoal)]/20" />
+        <!-- Map -->
+        <div class="aspect-[4/3] bg-[var(--color-brand-stone)] rounded-sm overflow-hidden border border-[var(--color-brand-gold)]">
+          <iframe
+            src="https://maps.google.com/maps?q=Algarinejo,+Granada,+Spain&z=14&output=embed"
+            :title="t('ContactPage.mapTitle')"
+            class="w-full h-full border-0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          />
         </div>
 
         <!-- Contact details -->
