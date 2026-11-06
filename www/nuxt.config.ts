@@ -39,7 +39,7 @@ export default defineNuxtConfig({
 
   fonts: {
     families: [
-      { name: 'Cinzel', provider: 'google', weights: [400, 500, 600, 700] },
+      { name: 'Cormorant Garamond', provider: 'google', weights: [400, 500, 600, 700] },
       { name: 'Montserrat', provider: 'google', weights: [300, 400, 500, 600, 700] },
       { name: 'Lora', provider: 'google', weights: [400, 500, 600], styles: ['normal', 'italic'] }
     ]

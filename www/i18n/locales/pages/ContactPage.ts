@@ -38,7 +38,7 @@ export default {
     faq4Q: 'Can we rent the entire house for a private event?',
     faq4A: 'Absolutely. The entire property with all rooms and shared spaces can be reserved exclusively for your group. Please use the contact form with "Whole House / Exclusive Use" selected, and we\'ll discuss availability and pricing.',
     faq5Q: 'Do you have single rooms?',
-    faq5A: 'No. All nine of our rooms are doubles, each with a double bed for two guests sharing. Solo travellers are very welcome and stay in a double room.'
+    faq5A: 'No. All ten of our rooms are doubles, each with a double bed for two guests sharing. Solo travellers are very welcome and stay in a double room.'
   },
   es: {
     label: 'Contacto',
@@ -79,6 +79,6 @@ export default {
     faq4Q: '¿Se puede alquilar la casa entera para un evento privado?',
     faq4A: 'Por supuesto. La propiedad completa con todas las habitaciones y espacios compartidos se puede reservar exclusivamente para tu grupo. Por favor usa el formulario de contacto seleccionando "Casa Completa / Uso Exclusivo" y hablaremos sobre disponibilidad y precios.',
     faq5Q: '¿Tienen habitaciones individuales?',
-    faq5A: 'No. Nuestras nueve habitaciones son dobles, cada una con cama de matrimonio para dos personas. Quienes viajan solos son muy bienvenidos y se alojan en una habitación doble.'
+    faq5A: 'No. Nuestras diez habitaciones son dobles, cada una con cama de matrimonio para dos personas. Quienes viajan solos son muy bienvenidos y se alojan en una habitación doble.'
   }
 }

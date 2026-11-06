@@ -3,9 +3,9 @@
 // Guests book by room *type*, not by individual room — the owners assign the
 // specific room. Slugs map to the three physical categories in the house.
 const roomPhotoCounts: Record<string, number> = {
-  'top-floor': 6,
-  'standard': 10,
-  'ground-floor': 10
+  'top-floor': 5,
+  'standard': 13,
+  'ground-floor': 6
 }
 
 export function getRoomImages(slug: string): string[] {

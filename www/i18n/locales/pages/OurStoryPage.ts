@@ -1,7 +1,7 @@
 export default {
   en: {
     heritageImageAlt: 'The whitewashed façade and entrance of La Casa de María',
-    architectureImageAlt: 'Wrought-iron staircase beneath original wooden beams',
+    architectureImageAlt: 'Old clay tinajas resting against a stone wall beneath wooden beams',
     hostsImageAlt: 'A handmade leather key tag hanging from an old wooden door',
     label: 'Heritage',
     title: 'Our Story',
@@ -17,7 +17,7 @@ export default {
   },
   es: {
     heritageImageAlt: 'La fachada encalada y la entrada de La Casa de María',
-    architectureImageAlt: 'Escalera de forja bajo las vigas de madera originales',
+    architectureImageAlt: 'Antiguas tinajas de barro junto a un muro de piedra bajo vigas de madera',
     hostsImageAlt: 'Un llavero de cuero artesanal colgado de una antigua puerta de madera',
     label: 'Patrimonio',
     title: 'Nuestra Historia',

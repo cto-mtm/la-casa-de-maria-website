@@ -15,15 +15,15 @@ export type GalleryCategory = 'house' | 'grounds' | 'details' | 'rooms'
 // owns the image → category mapping.
 const house = [
   'lounge', 'lounge-tiles', 'dining-room', 'dining-room-2', 'chandelier',
-  'hallway', 'staircase', 'staircase-2', 'staircase-3',
-  'cellar', 'cellar-copper', 'cellar-bottle',
+  'lounge-dining', 'hallway', 'staircase', 'staircase-2', 'staircase-3', 'staircase-4',
+  'cellar', 'cellar-2', 'cellar-copper', 'cellar-bottle',
   'facade-entrance', 'facade-street'
 ].map(name => ({ src: `/images/house/${name}.webp`, category: 'house' as const }))
 
 const grounds = [
   'courtyard', 'patio-seating', 'patio-lounge', 'patio-fountain',
   'patio-pots', 'patio-vines', 'patio-wall', 'patio-wall-2',
-  'rooftop-terrace', 'window-vines', 'flowers', 'flowers-2'
+  'window-vines', 'flowers', 'flowers-2'
 ].map(name => ({ src: `/images/outdoors/${name}.webp`, category: 'grounds' as const }))
 
 const details = [
@@ -37,6 +37,7 @@ const rooms: GalleryImage[] = [
   { src: '/images/rooms/top-floor/01.webp', category: 'rooms' },
   { src: '/images/rooms/top-floor/02.webp', category: 'rooms' },
   { src: '/images/rooms/top-floor/03.webp', category: 'rooms' },
+  { src: '/images/rooms/top-floor/05.webp', category: 'rooms' },
   { src: '/images/rooms/standard/01.webp', category: 'rooms' },
   { src: '/images/rooms/standard/02.webp', category: 'rooms' },
   { src: '/images/rooms/standard/03.webp', category: 'rooms' },

@@ -22,7 +22,7 @@
 - **Stone** `#EFECE4` — Section separators, card backgrounds
 
 ### Typography
-- **Cinzel** — Display headings (H1, H2), room names. Always uppercase or title case.
+- **Cormorant Garamond** — Display headings (H1, H2), room names. Always uppercase or title case.
 - **Montserrat** — Navigation, buttons, labels, subheaders. Uppercase with `letter-spacing: 0.15em`.
 - **Lora** — Body paragraphs, long-form text. Warm serif for readability.
 

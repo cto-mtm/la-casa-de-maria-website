@@ -29,7 +29,7 @@ export default {
     },
 
     'top-floor': {
-      story: 'The Top Floor Room is the largest in the house and the one room we let you request by name. A generous private balcony becomes your personal mirador — perfect for watching the sunset paint the Sierra Priego foothills in gold and violet. Inside, warm textiles and wooden beams create a cozy mountain-lodge atmosphere, with the most expansive views La Casa de María has to offer.'
+      story: 'The Rooftop Suite is the largest accommodation in the house and the only one we let you request by name. A generous private balcony becomes your personal mirador — perfect for watching the sunset paint the Sierra Priego foothills in gold and violet. Inside, warm textiles and wooden beams create a cozy mountain-lodge atmosphere, with the most expansive views La Casa de María has to offer.'
     },
     standard: {
       story: 'Our standard rooms share the warm, timeless character of the house — original architectural details, curated antiques, a double bed for two guests, and a private en-suite bathroom in every room. Each is a little different, shaped by the 200-year-old walls around it, but all offer the same comfort and calm. Because they are so similar, we assign the specific room on arrival so we can host every guest as comfortably as possible. One standard room sits on the ground floor for those who prefer to avoid the stairs.'
@@ -64,7 +64,7 @@ export default {
     },
 
     'top-floor': {
-      story: 'La Habitación de la Planta Alta es la más amplia de la casa y la única que puedes solicitar por nombre. Un generoso balcón privado se convierte en tu mirador personal — perfecto para ver el atardecer pintar las estribaciones de la Sierra Priego en oro y violeta. En el interior, textiles cálidos y vigas de madera crean una atmósfera acogedora de refugio de montaña, con las vistas más amplias que ofrece La Casa de María.'
+      story: 'La Suite de la Azotea es el alojamiento más amplio de la casa y el único que puedes solicitar por nombre. Un generoso balcón privado se convierte en tu mirador personal — perfecto para ver el atardecer pintar las estribaciones de la Sierra Priego en oro y violeta. En el interior, textiles cálidos y vigas de madera crean una atmósfera acogedora de refugio de montaña, con las vistas más amplias que ofrece La Casa de María.'
     },
     standard: {
       story: 'Nuestras habitaciones estándar comparten el carácter cálido y atemporal de la casa — detalles arquitectónicos originales, antigüedades seleccionadas, cama de matrimonio para dos personas y baño privado en cada habitación. Cada una es un poco diferente, moldeada por los muros de 200 años que la rodean, pero todas ofrecen la misma comodidad y calma. Como son tan similares, asignamos la habitación concreta a la llegada para alojar a cada huésped de la forma más cómoda posible. Una habitación estándar está en la planta baja para quienes prefieren evitar las escaleras.'

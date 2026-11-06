@@ -19,7 +19,7 @@ const featuredRooms = [
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
       <!-- Background -->
       <img
-        src="/images/outdoors/rooftop-terrace.webp"
+        src="/images/rooms/top-floor/05.webp"
         alt=""
         class="absolute inset-0 w-full h-full object-cover"
         fetchpriority="high"

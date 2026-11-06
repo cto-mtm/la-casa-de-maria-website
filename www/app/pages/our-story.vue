@@ -65,7 +65,7 @@ useSeoMeta({
             </p>
           </div>
           <div class="order-1 lg:order-2 aspect-[4/3] rounded-sm overflow-hidden border border-[var(--color-brand-gold)]/30">
-            <img src="/images/house/staircase-3.webp" :alt="t('OurStoryPage.architectureImageAlt')" class="w-full h-full object-cover" loading="lazy">
+            <img src="/images/details/clay-jars.webp" :alt="t('OurStoryPage.architectureImageAlt')" class="w-full h-full object-cover object-[center_70%]" loading="lazy">
           </div>
         </div>
 

@@ -4,11 +4,11 @@ const localePath = useLocalePath()
 
 useSeoMeta({
   title: 'Our Rooms — La Casa de María',
-  description: 'Nine double en-suite rooms in a 200-year-old Andalusian house. Choose our Top Floor Room with its private balcony, or a comfortable Standard Room — including a ground-floor option.'
+  description: 'Ten double en-suite rooms in a 200-year-old Andalusian house. Choose our Rooftop Suite with its private balcony, or one of nine comfortable Standard Rooms — including a ground-floor option.'
 })
 
 // Guests book by room *type*, not an individual named room. The owners assign
-// the specific standard room on arrival. Only the Top Floor Room is requestable
+// the specific standard room on arrival. Only the Rooftop Suite is requestable
 // by name.
 const roomTypes = [
   { slug: 'top-floor', name: 'RoomsPage.topFloorName', highlight: 'RoomsPage.topFloorHighlight', price: 'RoomsPage.topFloorPrice' },

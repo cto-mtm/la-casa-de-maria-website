@@ -82,7 +82,7 @@ const experiences = [
           </p>
         </div>
         <div class="aspect-[4/3] rounded-sm overflow-hidden border border-[var(--color-brand-gold)]/30">
-          <img src="/images/rooms/standard/01.webp" :alt="t('ExperiencePage.surroundingsImageAlt')" class="w-full h-full object-cover" loading="lazy">
+          <img src="/images/rooms/top-floor/02.webp" :alt="t('ExperiencePage.surroundingsImageAlt')" class="w-full h-full object-cover" loading="lazy">
         </div>
       </div>
     </section>

@@ -2,11 +2,11 @@ export default {
   en: {
     label: 'Accommodations',
     title: 'Our Rooms',
-    intro: 'La Casa de María has nine double rooms spread across our 200-year-old house, each with a double bed for two guests, a private en-suite bathroom, and the same heritage character — original details, curated antiques, and modern comforts. We have no single rooms. We offer two kinds of stay: our one Top Floor Room, and our comfortable Standard Rooms.',
+    intro: 'La Casa de María has ten double rooms spread across our 200-year-old house, each with a double bed for two guests, a private en-suite bathroom, and the same heritage character — original details, curated antiques, and modern comforts. We have no single rooms. We offer two kinds of stay: our one Rooftop Suite, and our nine comfortable Standard Rooms - one on the ground floor, four on the second floor and four on the third.',
 
-    // Top Floor type
-    topFloorName: 'Top Floor Room',
-    topFloorHighlight: 'Our largest room, with a private balcony and the best views in the house.',
+    // Rooftop Suite type
+    topFloorName: 'Rooftop Suite',
+    topFloorHighlight: 'Our largest accommodation, crowning the house with a private balcony and the best views in the house.',
     topFloorPrice: 'A little above our standard rate',
 
     // Standard type
@@ -15,21 +15,21 @@ export default {
     standardPrice: 'Our everyday rate',
 
     // How assignment works
-    assignNote: "Apart from the Top Floor Room, our standard rooms are very similar, so we assign the specific room on arrival to host everyone as comfortably as possible. One standard room is on the ground floor — if stairs are difficult for you, just let us know when you book and we'll reserve it for you.",
+    assignNote: "Apart from the Rooftop Suite, our nine standard rooms (one on the ground floor, four on the second and four on the third) are very similar, so we assign the specific room on arrival to host everyone as comfortably as possible. One standard room is on the ground floor — if stairs are difficult for you, just let us know when you book and we'll reserve it for you.",
 
     viewRoom: 'View Room',
     exclusiveTitle: 'Looking for an Exclusive Getaway?',
-    exclusiveText: 'Reserve the entire house for your group — all nine rooms, the decorated cellar, the courtyard, and every shared space become exclusively yours.',
+    exclusiveText: 'Reserve the entire house for your group — all ten rooms, the decorated cellar, the courtyard, and every shared space become exclusively yours.',
     exclusiveCta: 'Inquire About Exclusive Use'
   },
   es: {
     label: 'Alojamiento',
     title: 'Nuestras Habitaciones',
-    intro: 'La Casa de María cuenta con nueve habitaciones dobles repartidas por nuestra casa de 200 años, cada una con cama de matrimonio para dos personas, baño privado y el mismo carácter patrimonial: detalles originales, antigüedades seleccionadas y comodidades modernas. No disponemos de habitaciones individuales. Ofrecemos dos tipos de estancia: nuestra única Habitación de la Planta Alta y nuestras cómodas Habitaciones Estándar.',
+    intro: 'La Casa de María cuenta con diez habitaciones dobles repartidas por nuestra casa de 200 años, cada una con cama de matrimonio para dos personas, baño privado y el mismo carácter patrimonial: detalles originales, antigüedades seleccionadas y comodidades modernas. No disponemos de habitaciones individuales. Ofrecemos dos tipos de estancia: nuestra única Suite de la Azotea y nuestras nueve cómodas Habitaciones Estándar: una en la planta baja, cuatro en la segunda planta y cuatro en la tercera.',
 
-    // Top Floor type
-    topFloorName: 'Habitación de la Planta Alta',
-    topFloorHighlight: 'Nuestra habitación más amplia, con balcón privado y las mejores vistas de la casa.',
+    // Rooftop Suite type
+    topFloorName: 'Suite de la Azotea',
+    topFloorHighlight: 'Nuestro alojamiento más amplio, que corona la casa con balcón privado y las mejores vistas de la casa.',
     topFloorPrice: 'Un poco por encima de nuestra tarifa estándar',
 
     // Standard type
@@ -38,11 +38,11 @@ export default {
     standardPrice: 'Nuestra tarifa habitual',
 
     // How assignment works
-    assignNote: 'Salvo la Habitación de la Planta Alta, nuestras habitaciones estándar son muy similares, por lo que asignamos la habitación concreta a la llegada para alojar a todos de la forma más cómoda posible. Una habitación estándar está en la planta baja — si las escaleras te resultan difíciles, indícanoslo al reservar y te la reservaremos.',
+    assignNote: 'Salvo la Suite de la Azotea, nuestras nueve habitaciones estándar (una en la planta baja, cuatro en la segunda y cuatro en la tercera) son muy similares, por lo que asignamos la habitación concreta a la llegada para alojar a todos de la forma más cómoda posible. Una habitación estándar está en la planta baja — si las escaleras te resultan difíciles, indícanoslo al reservar y te la reservaremos.',
 
     viewRoom: 'Ver Habitación',
     exclusiveTitle: '¿Buscas una Escapada Exclusiva?',
-    exclusiveText: 'Reserva la casa entera para tu grupo — las nueve habitaciones, la bodega decorada, el patio y cada espacio compartido son exclusivamente tuyos.',
+    exclusiveText: 'Reserva la casa entera para tu grupo — las diez habitaciones, la bodega decorada, el patio y cada espacio compartido son exclusivamente tuyos.',
     exclusiveCta: 'Consultar Uso Exclusivo'
   }
 }
