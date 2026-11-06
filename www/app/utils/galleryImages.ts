@@ -23,7 +23,8 @@ const house = [
 const grounds = [
   'courtyard', 'patio-seating', 'patio-lounge', 'patio-fountain',
   'patio-pots', 'patio-vines', 'patio-wall', 'patio-wall-2',
-  'window-vines', 'flowers', 'flowers-2'
+  'window-vines', 'flowers', 'flowers-2',
+  'town-rooftops', 'town-valley', 'town-hilltop'
 ].map(name => ({ src: `/images/outdoors/${name}.webp`, category: 'grounds' as const }))
 
 const details = [
