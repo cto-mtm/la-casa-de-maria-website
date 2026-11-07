@@ -61,7 +61,7 @@ const navLinks = [
         class="relative z-50 flex flex-col items-center"
         @click="closeMobileMenu"
       >
-        <span class="sr-only">La Casa de María — Algarinejo, Granada</span>
+        <span class="sr-only">La Casa de María - Algarinejo, Granada</span>
         <span
           class="brand-wordmark block h-9 lg:h-11 aspect-[800/308] transition-colors duration-300"
           :class="isScrolled || isMobileMenuOpen ? 'text-[var(--color-brand-gold-dark)]' : 'text-white'"

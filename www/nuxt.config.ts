@@ -114,20 +114,20 @@ export default defineNuxtConfig({
     // Add 301 redirects for old URLs from a prior site or domain
     // restructure. Keep this list in sync with /legacy_urls.md.
     //
-    // Pattern A — single page:
+    // Pattern A - single page:
     //   '/old-path': { redirect: { to: '/new-path', statusCode: 301 } },
     //
-    // Pattern B — directory with wildcard:
+    // Pattern B - directory with wildcard:
     //   '/old-section/**': { redirect: { to: '/new-section', statusCode: 301 } },
     //
-    // Pattern C — section merged into another:
+    // Pattern C - section merged into another:
     //   '/team': { redirect: { to: '/about#team', statusCode: 301 } },
     // ────────────────────────────────────────────────────────────
 
     // '/example-old': { redirect: { to: '/', statusCode: 301 } },
 
     // Named rooms were replaced by room *types* (Top Floor / Standard). The old
-    // per-room pages no longer exist — send their traffic to the rooms page.
+    // per-room pages no longer exist - send their traffic to the rooms page.
     '/rooms/la-alcoba': { redirect: { to: '/rooms', statusCode: 301 } },
     '/rooms/el-mirador': { redirect: { to: '/rooms', statusCode: 301 } },
     '/rooms/la-bodega': { redirect: { to: '/rooms', statusCode: 301 } },

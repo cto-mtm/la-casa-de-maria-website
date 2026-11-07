@@ -1,6 +1,6 @@
 <script setup lang="ts">
 /**
- * SectionDivider — a large ornamental Baroque acanthus flourish that sits on
+ * SectionDivider - a large ornamental Baroque acanthus flourish that sits on
  * the *seam between two page sections*, at the layout level. Distinct from the
  * small inline <BrandDivider> accent used within text blocks.
  *

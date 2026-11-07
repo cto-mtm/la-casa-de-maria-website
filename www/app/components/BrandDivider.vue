@@ -1,6 +1,6 @@
 <script setup lang="ts">
 /**
- * BrandDivider — an ornamental section divider inspired by the gold
+ * BrandDivider - an ornamental section divider inspired by the gold
  * rococo cartouche in the La Casa de María crest. A central mirrored
  * flourish (C-scrolls + a small lotus/diamond motif) is flanked by two
  * tapering hairlines, echoing the top crest and bottom pendant of the frame.

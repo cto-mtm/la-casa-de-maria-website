@@ -41,7 +41,7 @@ export function buildNotificationEmail(
           <!-- Footer -->
           <tr>
             <td style="padding:16px 32px;background:#f8fafc;border-top:1px solid #e2e8f0;">
-              <p style="margin:0;color:#9ca3af;font-size:12px;">REPLACE_ME — REPLACE_ME_ADDRESS</p>
+              <p style="margin:0;color:#9ca3af;font-size:12px;">REPLACE_ME - REPLACE_ME_ADDRESS</p>
             </td>
           </tr>
         </table>

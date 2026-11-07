@@ -2,7 +2,7 @@
 const nuxtApp = useNuxtApp()
 const isLoading = ref(false)
 
-// Branded splash — rendered on the server so it covers the first paint,
+// Branded splash - rendered on the server so it covers the first paint,
 // then dismissed once the app has hydrated and the page has loaded.
 const showSplash = ref(true)
 

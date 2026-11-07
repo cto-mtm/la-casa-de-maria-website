@@ -6,20 +6,18 @@ const route = useRoute()
 // Get room-type slug from route params
 const slug = computed(() => route.params.slug as string)
 
-// Two bookable room *types*. Guests pick a type, not an individual room —
+// Two bookable room *types*. Guests pick a type, not an individual room -
 // the owners assign the specific standard room on arrival.
-const roomsData: Record<string, { nameKey: string; storyKey: string; priceKey: string; amenities: string[]; isStandard: boolean }> = {
+const roomsData: Record<string, { nameKey: string; storyKey: string; amenities: string[]; isStandard: boolean }> = {
   'top-floor': {
     nameKey: 'RoomsPage.topFloorName',
     storyKey: 'RoomPage.top-floor',
-    priceKey: 'RoomsPage.topFloorPrice',
     amenities: ['doubleRoom', 'enSuite', 'kingBed', 'airCon', 'wifi', 'balcony', 'panoramicView', 'largerRoom', 'heritageDetails'],
     isStandard: false
   },
   'standard': {
     nameKey: 'RoomsPage.standardName',
     storyKey: 'RoomPage.standard',
-    priceKey: 'RoomsPage.standardPrice',
     amenities: ['doubleRoom', 'enSuite', 'queenBed', 'airCon', 'wifi', 'heritageDetails', 'groundFloorAvailable'],
     isStandard: true
   }
@@ -34,8 +32,8 @@ const room = computed(() => roomsData[slug.value]!)
 const roomName = computed(() => t(room.value.nameKey))
 
 useSeoMeta({
-  title: () => `${roomName.value} — La Casa de María`,
-  description: () => `Discover the ${roomName.value} at La Casa de María — a double en-suite room for two with heritage character.`
+  title: () => `${roomName.value} - La Casa de María`,
+  description: () => `Discover the ${roomName.value} at La Casa de María - a double en-suite room for two with heritage character.`
 })
 
 // Amenity icon map
@@ -81,9 +79,6 @@ const galleryImages = computed(() => roomImages.value.slice(1))
           {{ t('RoomPage.backToRooms') }}
         </NuxtLink>
         <h1 class="font-display text-4xl md:text-5xl text-white mt-2">{{ roomName }}</h1>
-        <p class="font-montserrat text-[0.7rem] uppercase tracking-[0.15em] text-white/70 mt-3">
-          {{ t('RoomPage.priceLabel') }}: {{ t(room.priceKey) }}
-        </p>
       </div>
     </section>
 

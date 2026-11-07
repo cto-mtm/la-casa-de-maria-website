@@ -27,9 +27,9 @@ This repo contains a Nuxt 4 static marketing site served via Firebase Hosting, w
 
 ## Build & Deploy Flow
 
-1. `cd www && npm run generate` — Nuxt builds static HTML into `.output/public/`.
+1. `cd www && npm run generate` - Nuxt builds static HTML into `.output/public/`.
 2. Copy `.output/public/` contents into `firebase/www/`.
-3. `cd firebase && firebase deploy` — deploys Hosting + Functions.
+3. `cd firebase && firebase deploy` - deploys Hosting + Functions.
 
 The Hosting `public` directory in `firebase.json` is set to `"www"` because the deploy flow places the generated static site there.
 

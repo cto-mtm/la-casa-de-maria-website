@@ -2,8 +2,8 @@
 const { t } = useI18n()
 
 useSeoMeta({
-  title: 'Gallery — La Casa de María',
-  description: 'A visual tour of La Casa de María — our 200-year-old house, its gardens and courtyard, handcrafted details, and rooms in the Andalusian countryside.'
+  title: 'Gallery - La Casa de María',
+  description: 'A visual tour of La Casa de María - our 200-year-old house, its gardens and courtyard, handcrafted details, and rooms in the Andalusian countryside.'
 })
 
 type Filter = 'all' | GalleryCategory

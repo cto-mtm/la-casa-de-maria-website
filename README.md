@@ -1,4 +1,4 @@
-# La Casa de María — Website
+# La Casa de María - Website
 
 Nuxt 4 static marketing site + Firebase Hosting + Cloud Functions for form handling.
 
@@ -47,7 +47,7 @@ npm run optimize:images -- --quality=82 --max-width=1600
 
 ## Adding a New Form Type
 
-1. Edit `firebase/functions/src/models.ts` — add a new key to `formConfigs` with its Zod schema, notification email, and subjects.
+1. Edit `firebase/functions/src/models.ts` - add a new key to `formConfigs` with its Zod schema, notification email, and subjects.
 2. Redeploy functions: `cd firebase/functions && npm run deploy`
 3. Call from the frontend: `useSubmitForm('your-type', { ...fields })`
 
@@ -80,7 +80,7 @@ firebase functions:secrets:set RECAPTCHA_SECRET_KEY
 ## Keeping dependencies fresh
 
 Versions in `package.json` are pinned to the dates this boilerplate was
-generated. They're intentionally NOT auto-updated on install — the goal is
+generated. They're intentionally NOT auto-updated on install - the goal is
 that `npm install && npm run dev` always works on day one.
 
 Recommended workflow when starting a new project from this scaffold:
@@ -90,11 +90,11 @@ Recommended workflow when starting a new project from this scaffold:
 2. Commit the scaffold as your baseline (`git commit -m "initial scaffold"`).
 3. Run `npm outdated` in each folder to see drift, and `npm audit` for
    security issues.
-4. Upgrade deliberately — one major version at a time, testing between each.
+4. Upgrade deliberately - one major version at a time, testing between each.
    Watch especially for breaking changes in Nuxt, Nuxt UI, Firebase
    Functions, and zod (these have all shipped breaking majors in the past).
 5. After upgrading, re-run `npm run dev` and click through the key pages /
    submit the contact form before committing.
 
-Avoid running `npm update` blindly — it will pull breaking majors without
+Avoid running `npm update` blindly - it will pull breaking majors without
 warning and you'll lose the "clean baseline" property.

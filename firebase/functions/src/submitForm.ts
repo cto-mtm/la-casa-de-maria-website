@@ -13,7 +13,7 @@ const GMAIL_APP_PASSWORD = defineSecret("GMAIL_APP_PASSWORD");
 const GMAIL_SENDER = defineSecret("GMAIL_SENDER");
 const RECAPTCHA_SECRET_KEY = defineSecret("RECAPTCHA_SECRET_KEY");
 
-// REPLACE_ME — Update these origins for your production domain
+// REPLACE_ME - Update these origins for your production domain
 const ALLOWED_ORIGINS = [
   "https://example.com",
   "https://www.example.com",
@@ -93,7 +93,7 @@ export const submitForm = onRequest(
       await transporter.sendMail({
         from,
         to: config.notifyEmail,
-        subject: `${config.subject} — ${senderName}`,
+        subject: `${config.subject} - ${senderName}`,
         html: buildNotificationEmail(config, parsed),
       });
 

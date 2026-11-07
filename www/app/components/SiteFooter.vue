@@ -14,7 +14,7 @@ const localePath = useLocalePath()
         <div>
           <img
             src="/images/brand/logo-crest.webp"
-            alt="La Casa de María — Algarinejo, Granada"
+            alt="La Casa de María - Algarinejo, Granada"
             class="h-28 w-auto mb-6"
             width="400"
             height="480"

@@ -3,7 +3,7 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 
 useSeoMeta({
-  title: 'La Casa de María — Boutique Rural Hotel in Granada',
+  title: 'La Casa de María - Boutique Rural Hotel in Granada',
   description: 'A 200-year-old heritage house turned boutique hotel in Algarinejo, Granada. Unique rooms, Andalusian countryside charm.'
 })
 
@@ -15,6 +15,7 @@ const featuredRooms = [
 // Hero background: views of Algarinejo, crossfading in a loop.
 const heroImages = [
   '/images/outdoors/town-rooftops.webp',
+  '/images/rooms/top-floor/05.webp',
   '/images/outdoors/town-valley.webp',
   '/images/outdoors/town-hilltop.webp'
 ]
@@ -36,9 +37,9 @@ onBeforeUnmount(() => clearInterval(heroTimer))
 
 <template>
   <div>
-    <!-- Hero Section — Full screen atmospheric -->
+    <!-- Hero Section - Full screen atmospheric -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <!-- Background — rotating crossfade of town views -->
+      <!-- Background - rotating crossfade of town views -->
       <div class="absolute inset-0" aria-hidden="true">
         <img
           v-for="(src, i) in heroImages"
@@ -115,7 +116,7 @@ onBeforeUnmount(() => clearInterval(heroTimer))
           </p>
         </div>
 
-        <!-- Room-type cards — horizontal scroll on mobile, grid on desktop -->
+        <!-- Room-type cards - horizontal scroll on mobile, grid on desktop -->
         <div class="flex overflow-x-auto lg:grid lg:grid-cols-2 lg:max-w-3xl lg:mx-auto gap-6 pb-4 lg:pb-0 snap-x snap-mandatory">
           <div
             v-for="room in featuredRooms"

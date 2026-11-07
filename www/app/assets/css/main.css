@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ─────────────────────────────────────────────────────────
-   La Casa de María — Brand Design System
+   La Casa de María - Brand Design System
    ───────────────────────────────────────────────────────── */
 
 /* Brand Colors as CSS Custom Properties */
@@ -41,6 +41,12 @@ body {
 
 h1, h2, h3 {
   font-family: 'Cormorant Garamond', serif;
+}
+
+/* Display headings are set in all caps per brand direction */
+h1, h2,
+.font-display {
+  text-transform: uppercase;
 }
 
 /* Montserrat utility for nav/labels */
@@ -208,7 +214,7 @@ h1, h2, h3 {
 .border-gold { border-color: var(--color-brand-gold); }
 
 /* ─────────────────────────────────────────────────────────
-   Brand Marks — single-colour logos tinted via currentColor
+   Brand Marks - single-colour logos tinted via currentColor
    ───────────────────────────────────────────────────────── */
 .brand-wordmark,
 .brand-iso {

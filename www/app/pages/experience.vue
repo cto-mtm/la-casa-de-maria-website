@@ -2,7 +2,7 @@
 const { t } = useI18n()
 
 useSeoMeta({
-  title: 'The Experience — La Casa de María',
+  title: 'The Experience - La Casa de María',
   description: 'Discover the Andalusian countryside: gastronomy, nature, culture, and activities around Algarinejo, Granada.'
 })
 
@@ -84,6 +84,22 @@ const experiences = [
         <div class="aspect-[4/3] rounded-sm overflow-hidden border border-[var(--color-brand-gold)]/30">
           <img src="/images/rooms/top-floor/02.webp" :alt="t('ExperiencePage.surroundingsImageAlt')" class="w-full h-full object-cover" loading="lazy">
         </div>
+      </div>
+    </section>
+
+    <!-- Nearby towns worth visiting -->
+    <section class="bg-ivory py-24 px-6">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="font-montserrat text-[0.7rem] uppercase tracking-[0.2em] text-[var(--color-brand-gold)] mb-3">
+          {{ t('ExperiencePage.nearbyLabel') }}
+        </p>
+        <h2 class="font-display text-2xl md:text-3xl text-[var(--color-brand-charcoal)] mb-6">
+          {{ t('ExperiencePage.nearbyTitle') }}
+        </h2>
+        <BrandDivider class="mb-8" />
+        <p class="font-body text-base text-[var(--color-brand-charcoal)]/80 leading-relaxed">
+          {{ t('ExperiencePage.nearbyText') }}
+        </p>
       </div>
     </section>
 

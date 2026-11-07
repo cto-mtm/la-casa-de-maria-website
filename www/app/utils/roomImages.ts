@@ -1,6 +1,6 @@
 // Photos per room type, served from public/images/rooms/<slug>/.
 // The first image is the type's cover (cards + hero); the rest form its gallery.
-// Guests book by room *type*, not by individual room — the owners assign the
+// Guests book by room *type*, not by individual room - the owners assign the
 // specific room. Slugs map to the three physical categories in the house.
 const roomPhotoCounts: Record<string, number> = {
   'top-floor': 5,

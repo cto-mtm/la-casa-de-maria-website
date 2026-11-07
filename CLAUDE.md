@@ -1,10 +1,10 @@
-# La Casa de María — Website
+# La Casa de María - Website
 
 ## Project Structure
 
-- `www/` — Nuxt 4 marketing website
-- `firebase/` — Firebase Hosting config + Cloud Functions
-- `docs/` — Internal documentation
+- `www/` - Nuxt 4 marketing website
+- `firebase/` - Firebase Hosting config + Cloud Functions
+- `docs/` - Internal documentation
 
 ## Development
 
@@ -16,15 +16,15 @@
 ## Brand & Design System
 
 ### Colors
-- **Antique Gold** `#C2A45A` — Buttons, accents, dividers, icons
-- **Warm Ivory** `#FAFAF5` — Main background
-- **Charcoal** `#2A2925` — Primary text (never use pure black)
-- **Stone** `#EFECE4` — Section separators, card backgrounds
+- **Antique Gold** `#C2A45A` - Buttons, accents, dividers, icons
+- **Warm Ivory** `#FAFAF5` - Main background
+- **Charcoal** `#2A2925` - Primary text (never use pure black)
+- **Stone** `#EFECE4` - Section separators, card backgrounds
 
 ### Typography
-- **Cormorant Garamond** — Display headings (H1, H2), room names. Always uppercase or title case.
-- **Montserrat** — Navigation, buttons, labels, subheaders. Uppercase with `letter-spacing: 0.15em`.
-- **Lora** — Body paragraphs, long-form text. Warm serif for readability.
+- **Cormorant Garamond** - Display headings (H1, H2), room names. Always uppercase or title case.
+- **Montserrat** - Navigation, buttons, labels, subheaders. Uppercase with `letter-spacing: 0.15em`.
+- **Lora** - Body paragraphs, long-form text. Warm serif for readability.
 
 ### UI Elements
 - Buttons: Solid gold (`btn-brand`) or outlined ghost (`btn-brand-outline`)

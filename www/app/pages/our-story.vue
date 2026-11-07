@@ -2,7 +2,7 @@
 const { t } = useI18n()
 
 useSeoMeta({
-  title: 'Our Story — La Casa de María',
+  title: 'Our Story - La Casa de María',
   description: 'Discover the 200-year history of La Casa de María, a carefully preserved Andalusian heritage house in Algarinejo, Granada.'
 })
 </script>
@@ -30,10 +30,10 @@ useSeoMeta({
       </div>
     </section>
 
-    <!-- Heritage Section — Staggered Layout -->
+    <!-- Heritage Section - Staggered Layout -->
     <section class="bg-ivory py-24 px-6">
       <div class="mx-auto max-w-5xl">
-        <!-- Block 1 — Image left, text right -->
+        <!-- Block 1 - Image left, text right -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
           <div class="aspect-[4/3] rounded-sm overflow-hidden border border-[var(--color-brand-gold)]/30">
             <img src="/images/house/facade-entrance.webp" :alt="t('OurStoryPage.heritageImageAlt')" class="w-full h-full object-cover object-[center_35%]" loading="lazy">
@@ -51,7 +51,7 @@ useSeoMeta({
           </div>
         </div>
 
-        <!-- Block 2 — Text left, image right -->
+        <!-- Block 2 - Text left, image right -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
           <div class="order-2 lg:order-1">
             <p class="font-montserrat text-[0.7rem] uppercase tracking-[0.2em] text-[var(--color-brand-gold)] mb-3">
@@ -69,7 +69,7 @@ useSeoMeta({
           </div>
         </div>
 
-        <!-- Block 3 — The Hosts -->
+        <!-- Block 3 - The Hosts -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div class="aspect-[4/3] rounded-sm overflow-hidden border border-[var(--color-brand-gold)]/30">
             <img src="/images/details/room-key.webp" :alt="t('OurStoryPage.hostsImageAlt')" class="w-full h-full object-cover" loading="lazy">

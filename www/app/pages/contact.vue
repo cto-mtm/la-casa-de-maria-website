@@ -2,7 +2,7 @@
 const { t } = useI18n()
 
 useSeoMeta({
-  title: 'Contact & Location — La Casa de María',
+  title: 'Contact & Location - La Casa de María',
   description: 'Get in touch with La Casa de María. Book a room directly, inquire about exclusive use, or ask us anything.'
 })
 
@@ -44,6 +44,14 @@ function handleSubmit() {
 
   whatsappUrl.value = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`
   window.open(whatsappUrl.value, '_blank', 'noopener')
+}
+
+// Preselect the whole-house inquiry type and jump to the form
+function startWholeHouseInquiry() {
+  form.inquiryType = 'whole-house'
+  if (import.meta.client) {
+    document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })
+  }
 }
 // FAQ items
 const faqItems = [
@@ -116,6 +124,35 @@ function toggleFaq(index: number) {
           <a href="https://booking.com" target="_blank" rel="noopener" class="btn-brand-outline text-xs">
             {{ t('ContactPage.bookingComCta') }}
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rent the Entire House -->
+    <section class="bg-[var(--color-brand-charcoal)] py-20 px-6">
+      <div class="mx-auto max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div class="aspect-[4/3] rounded-sm overflow-hidden border border-[var(--color-brand-gold)]/30">
+          <img
+            src="/images/house/lounge.webp"
+            :alt="t('ContactPage.wholeHouseImageAlt')"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          >
+        </div>
+        <div>
+          <p class="font-montserrat text-[0.7rem] uppercase tracking-[0.2em] text-[var(--color-brand-gold-light)] mb-3">
+            {{ t('ContactPage.wholeHouseLabel') }}
+          </p>
+          <h2 class="font-display text-2xl md:text-3xl text-white mb-5">
+            {{ t('ContactPage.wholeHouseTitle') }}
+          </h2>
+          <p class="font-body text-base text-white/75 leading-relaxed mb-8">
+            {{ t('ContactPage.wholeHouseText') }}
+          </p>
+          <button type="button" class="btn-brand" @click="startWholeHouseInquiry">
+            <UIcon name="i-lucide-house" class="w-4 h-4" />
+            {{ t('ContactPage.wholeHouseCta') }}
+          </button>
         </div>
       </div>
     </section>

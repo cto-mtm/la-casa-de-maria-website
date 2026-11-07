@@ -2,7 +2,7 @@ export default {
   en: {
     label: 'Gallery',
     title: 'A Visual Tour',
-    intro: 'From the sunlit courtyard to the cool stone cellar, every corner of La Casa de María tells part of the story. Browse our favourite moments — then come write your own.',
+    intro: 'From the sunlit courtyard to the cool stone cellar, every corner of La Casa de María tells part of the story. Browse our favourite moments - then come write your own.',
     filterAll: 'All',
     filterHouse: 'The House',
     filterGrounds: 'Gardens & Patio',
@@ -23,7 +23,7 @@ export default {
   es: {
     label: 'Galería',
     title: 'Un Recorrido Visual',
-    intro: 'Desde el patio bañado por el sol hasta la fresca bodega de piedra, cada rincón de La Casa de María cuenta parte de la historia. Explora nuestros momentos favoritos — y luego ven a escribir el tuyo.',
+    intro: 'Desde el patio bañado por el sol hasta la fresca bodega de piedra, cada rincón de La Casa de María cuenta parte de la historia. Explora nuestros momentos favoritos - y luego ven a escribir el tuyo.',
     filterAll: 'Todo',
     filterHouse: 'La Casa',
     filterGrounds: 'Jardines y Patio',

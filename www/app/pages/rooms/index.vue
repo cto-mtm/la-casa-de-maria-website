@@ -3,16 +3,16 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 
 useSeoMeta({
-  title: 'Our Rooms — La Casa de María',
-  description: 'Ten double en-suite rooms in a 200-year-old Andalusian house. Choose our Rooftop Suite with its private balcony, or one of nine comfortable Standard Rooms — including a ground-floor option.'
+  title: 'Our Rooms - La Casa de María',
+  description: 'Ten double en-suite rooms in a 200-year-old Andalusian house. Choose our Rooftop Suite with its private balcony, or one of nine comfortable Standard Rooms - including a ground-floor option.'
 })
 
 // Guests book by room *type*, not an individual named room. The owners assign
 // the specific standard room on arrival. Only the Rooftop Suite is requestable
 // by name.
 const roomTypes = [
-  { slug: 'top-floor', name: 'RoomsPage.topFloorName', highlight: 'RoomsPage.topFloorHighlight', price: 'RoomsPage.topFloorPrice' },
-  { slug: 'standard', name: 'RoomsPage.standardName', highlight: 'RoomsPage.standardHighlight', price: 'RoomsPage.standardPrice' }
+  { slug: 'top-floor', name: 'RoomsPage.topFloorName', highlight: 'RoomsPage.topFloorHighlight' },
+  { slug: 'standard', name: 'RoomsPage.standardName', highlight: 'RoomsPage.standardHighlight' }
 ]
 </script>
 
@@ -70,11 +70,8 @@ const roomTypes = [
             <h3 class="font-display text-xl text-[var(--color-brand-charcoal)] mb-1 group-hover:text-[var(--color-brand-gold)] transition-colors">
               {{ t(room.name) }}
             </h3>
-            <p class="font-body text-sm text-[var(--color-brand-charcoal)]/60 mb-2">
+            <p class="font-body text-sm text-[var(--color-brand-charcoal)]/60 mb-3">
               {{ t(room.highlight) }}
-            </p>
-            <p class="font-montserrat text-[0.7rem] uppercase tracking-[0.1em] text-[var(--color-brand-charcoal)]/50 mb-3">
-              {{ t(room.price) }}
             </p>
             <span class="font-montserrat text-[0.7rem] uppercase tracking-[0.15em] text-[var(--color-brand-gold)] group-hover:text-[var(--color-brand-gold-dark)] transition-colors">
               {{ t('RoomsPage.viewRoom') }} →
@@ -92,6 +89,23 @@ const roomTypes = [
           <p class="font-body text-sm text-[var(--color-brand-charcoal)]/80 leading-relaxed">
             {{ t('RoomsPage.assignNote') }}
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best-rate / direct booking hint -->
+    <section class="bg-ivory pb-24 px-6">
+      <div class="mx-auto max-w-3xl">
+        <div class="flex items-start gap-4 p-6 bg-[var(--color-brand-stone)] rounded-sm border border-[var(--color-brand-gold)]/20">
+          <UIcon name="i-lucide-badge-percent" class="w-5 h-5 text-[var(--color-brand-gold)] flex-shrink-0 mt-0.5" />
+          <div>
+            <p class="font-body text-sm text-[var(--color-brand-charcoal)]/80 leading-relaxed mb-3">
+              {{ t('RoomsPage.directBookingNote') }}
+            </p>
+            <NuxtLink :to="localePath('contact')" class="font-montserrat text-[0.7rem] uppercase tracking-[0.15em] text-[var(--color-brand-gold)] hover:text-[var(--color-brand-gold-dark)] transition-colors">
+              {{ t('RoomsPage.directBookingCta') }} →
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </section>

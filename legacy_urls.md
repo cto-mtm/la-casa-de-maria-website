@@ -5,7 +5,7 @@ Keep this file in sync with the config.
 
 | Old URL | New URL | Notes |
 |---------|---------|-------|
-| `/example-old` | `/` | Example placeholder — remove when adding real redirects |
+| `/example-old` | `/` | Example placeholder - remove when adding real redirects |
 | `/rooms/la-alcoba` | `/rooms` | Named rooms replaced by room types (2026-10) |
 | `/rooms/el-mirador` | `/rooms` | Named rooms replaced by room types (2026-10) |
 | `/rooms/la-bodega` | `/rooms` | Named rooms replaced by room types (2026-10) |
