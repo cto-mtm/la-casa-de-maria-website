@@ -8,7 +8,7 @@ const localePath = useLocalePath()
     <!-- Gold divider -->
     <div class="h-px bg-[var(--color-brand-gold)] opacity-40" />
 
-    <div class="mx-auto max-w-7xl px-6 pt-16 pb-24 lg:pb-16">
+    <div class="mx-auto max-w-7xl px-6 pt-16 pb-24 lg:pb-28">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
         <!-- Brand -->
         <div>
@@ -90,7 +90,7 @@ const localePath = useLocalePath()
           <LanguageToggle variant="dark" />
           <!-- Social Links -->
           <div class="flex items-center gap-4">
-            <a href="#" class="text-white/40 hover:text-[var(--color-brand-gold)] transition-colors" aria-label="Instagram">
+            <a href="https://www.instagram.com/lacasademaria_algarinejo" target="_blank" rel="noopener" class="text-white/40 hover:text-[var(--color-brand-gold)] transition-colors" aria-label="Instagram">
               <UIcon name="i-lucide-instagram" class="w-5 h-5" />
             </a>
             <a href="#" class="text-white/40 hover:text-[var(--color-brand-gold)] transition-colors" aria-label="Facebook">

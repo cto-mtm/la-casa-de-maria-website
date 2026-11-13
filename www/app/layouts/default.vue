@@ -5,7 +5,7 @@
       <slot />
     </main>
     <SiteFooter />
-    <!-- Mobile sticky booking bar -->
+    <!-- Always-visible booking button (bar on mobile, floating on desktop) -->
     <MobileBookingBar />
     <!-- Spacer so the fixed MobileBookingBar doesn't overlap the footer on
          mobile. Sits below the footer, so it adds no visible gap above it. -->

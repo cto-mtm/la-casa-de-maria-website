@@ -83,7 +83,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: 'https://lacasademaria.com',
+    url: 'https://lacasademariadealgarinejo.com',
     name: 'La Casa de María',
     description: 'A 200-year-old boutique rural hotel in Algarinejo, Granada. Unique rooms with heritage character in the Andalusian countryside.',
     defaultLocale: 'en'

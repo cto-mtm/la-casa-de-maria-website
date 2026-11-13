@@ -1,8 +1,8 @@
 export default {
   en: {
-    bookRoom: 'Book a Room'
+    bookRoom: 'Book Here'
   },
   es: {
-    bookRoom: 'Reservar Habitación'
+    bookRoom: 'Reserva Aquí'
   }
 }

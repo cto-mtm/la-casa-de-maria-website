@@ -105,9 +105,16 @@ function toggleFaq(index: number) {
           <p class="font-body text-sm text-[var(--color-brand-charcoal)]/70 mb-6">
             {{ t('ContactPage.bookDirectText') }}
           </p>
-          <a href="#contact-form" class="btn-brand text-xs">
-            {{ t('ContactPage.bookDirectCta') }}
-          </a>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a href="#contact-form" class="btn-brand text-xs">
+              <UIcon name="i-lucide-message-circle" class="w-4 h-4" />
+              {{ t('ContactPage.bookDirectCta') }}
+            </a>
+            <a href="tel:+34670398348" class="btn-brand-outline text-xs">
+              <UIcon name="i-lucide-phone" class="w-4 h-4" />
+              {{ t('ContactPage.bookDirectCall') }}
+            </a>
+          </div>
         </div>
 
         <!-- Booking.com -->

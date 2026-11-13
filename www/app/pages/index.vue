@@ -12,43 +12,21 @@ const featuredRooms = [
   { slug: 'standard', name: 'RoomsPage.standardName', highlight: 'HomePage.standardHighlight' }
 ]
 
-// Hero background: views of Algarinejo, crossfading in a loop.
-const heroImages = [
-  '/images/outdoors/town-rooftops.webp',
-  '/images/rooms/top-floor/05.webp',
-  '/images/outdoors/town-valley.webp',
-  '/images/outdoors/town-hilltop.webp'
-]
-const HERO_INTERVAL_MS = 7000
-const activeHero = ref(0)
-let heroTimer: ReturnType<typeof setInterval> | undefined
-
-onMounted(() => {
-  // Respect users who've asked for less motion: keep the first image static.
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-  heroTimer = setInterval(() => {
-    if (document.hidden) return
-    activeHero.value = (activeHero.value + 1) % heroImages.length
-  }, HERO_INTERVAL_MS)
-})
-
-onBeforeUnmount(() => clearInterval(heroTimer))
+// Hero background: the rooftop terrace (static)
+const heroImage = '/images/rooms/top-floor/05.webp'
 </script>
 
 <template>
   <div>
     <!-- Hero Section - Full screen atmospheric -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <!-- Background - rotating crossfade of town views -->
+      <!-- Background - rooftop terrace -->
       <div class="absolute inset-0" aria-hidden="true">
         <img
-          v-for="(src, i) in heroImages"
-          :key="src"
-          :src="src"
+          :src="heroImage"
           alt=""
-          class="absolute inset-0 w-full h-full object-cover transition-[opacity,scale] ease-in-out motion-safe:duration-[1800ms,8000ms]"
-          :class="i === activeHero ? 'opacity-100 scale-100' : 'opacity-0 motion-safe:scale-105'"
-          :fetchpriority="i === 0 ? 'high' : 'low'"
+          class="absolute inset-0 w-full h-full object-cover"
+          fetchpriority="high"
           decoding="async"
         >
       </div>
